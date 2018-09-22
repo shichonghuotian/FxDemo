@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import application.fx.ann.ViewController;
 import application.fx.controller.FxIntent;
 import application.fx.controller.FxNavigationController;
+import application.fx.controller.FxTabBarController;
 import application.fx.controller.FxViewController;
 import application.fx.controller.FxViewHander;
 import javafx.event.ActionEvent;
@@ -53,7 +54,7 @@ public class MainController extends FxViewController {
 		// myTextField.setText("Hello world");
 
 		try {
-			show2();
+			show();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -62,23 +63,34 @@ public class MainController extends FxViewController {
 		
 
 	}
+//
+//	public void show() throws Exception {
+//
+//		//获取window
+////		FxViewHander.showControllerInWindow(SecondController.class,window);
+//		
+//		FxIntent intent = new FxIntent(FirstController.class);
+//		intent.putExtra("data", "test data");
+//		presentController(intent);
+//	}
 
-	public void show() throws Exception {
 
-		//获取window
-//		FxViewHander.showControllerInWindow(SecondController.class,window);
-		
-		FxIntent intent = new FxIntent(FirstController.class);
-		intent.putExtra("data", "test data");
-		presentController(intent);
-	}
+	public void show() throws Exception{
+		containerPane.getChildren().clear();
 
-
-	public void show2() throws Exception{
-		
 		FxNavigationController controller = new FxNavigationController(FirstController.class, containerPane);
 		
 		//
+	}
+	
+	public void tabClickAction(ActionEvent event) {
+		
+		showTab();
+	}
+	
+	public void showTab() {
+		containerPane.getChildren().clear();
+		FxTabBarController controller = new FxTabBarController(ChildTabController.class, containerPane);
 	}
 
 }

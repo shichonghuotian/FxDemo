@@ -22,6 +22,7 @@ public abstract class FxViewController implements Initializable{
 	//导航controller
 	private FxNavigationController navigationController;
 	
+	private FxTabBarController tabBarController;
 	private Window keyWindow;
 	
 	//
@@ -138,6 +139,21 @@ public abstract class FxViewController implements Initializable{
 			
 		}
 	}
+
+
+
+
+	public FxTabBarController getTabBarController() {
+		return tabBarController;
+	}
+
+
+
+
+	public void setTabBarController(FxTabBarController tabBarController) {
+		this.tabBarController = tabBarController;
+	}
+	
 	
 
 }
