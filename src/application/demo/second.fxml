@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="260.0" prefWidth="358.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="67.0" layoutY="117.0" mnemonicParsing="false" onAction="#clickAction" text="back" />
+      <Label layoutX="67.0" layoutY="26.0" prefHeight="44.0" prefWidth="158.0" text="second view" />
+      <Button layoutX="201.0" layoutY="117.0" mnemonicParsing="false" onAction="#nextAction" text="next" />
+   </children>
+</AnchorPane>

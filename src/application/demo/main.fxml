@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="pane" prefHeight="332.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="myButton" layoutX="220.0" layoutY="45.0" mnemonicParsing="false" onAction="#showText" text="Button" />
+      <TextField fx:id="myTextField" layoutX="27.0" layoutY="45.0" />
+      <Pane fx:id="containerPane" layoutX="27.0" layoutY="82.0" prefHeight="213.0" prefWidth="343.0" />
+   </children>
+</AnchorPane>
