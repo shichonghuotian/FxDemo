@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.Pane;
@@ -63,7 +65,7 @@ public class FxTabBarController extends FxViewController{
 	public void addTabController(FxIntent intent) throws Exception {
 		ViewContext<? extends FxViewController> viewContext = getViewContext(intent.getControllerClass());
 
-		FxViewController controller = viewContext.getController();
+	   final FxViewController controller = viewContext.getController();
 
 		controller.setTabBarController(this);
 		controller.setView(viewContext.getRootNode());
@@ -75,6 +77,8 @@ public class FxTabBarController extends FxViewController{
 
 //		addControllerToList(controller);
 
+		this.controllerList.add(controller);
+		
 		Tab tab = new Tab("Tab" + (mTabPane.getTabs().size() +1));
 		
 		tab.setContent(controller.getView());
@@ -82,6 +86,12 @@ public class FxTabBarController extends FxViewController{
 		mTabPane.getTabs().add(tab);
 		
 		mTabPane.getSelectionModel().select(tab);
+		tab.setOnClosed(e -> {
+			
+			this.controllerList.remove(controller);
+		});
+		
+		
 	}
 
 }
