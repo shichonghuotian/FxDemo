@@ -1,5 +1,5 @@
 proxies:
-  - {name: v1.weisimao.top, server: v1.weisimao.top, port: 37517, type: trojan, password: OHykGpJk, sni: v1.weisimao.top}
+  - {name: v1.weisimao.top, server: v1.weisimao.top, port: 21086, type: trojan, password: OHykGpJk, sni: v1.weisimao.top}
 
 proxy-groups:
   - name: PROXY
